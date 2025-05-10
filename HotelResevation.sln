@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelResevation", "HotelResevation\HotelResevation.csproj", "{5B15C729-37D4-496C-B1C8-3AA67FDEB6C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.End Point", "3.End Point", "{DE28A7DA-F5B6-4A53-BAF4-AEE43DA2C95D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.infrastrocture", "2.infrastrocture", "{5079C3B4-851A-48AA-B41B-314B8798522F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Domain", "1.Domain", "{29AA8142-7CF4-4A8B-A2A7-81491EC227EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B15C729-37D4-496C-B1C8-3AA67FDEB6C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B15C729-37D4-496C-B1C8-3AA67FDEB6C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B15C729-37D4-496C-B1C8-3AA67FDEB6C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B15C729-37D4-496C-B1C8-3AA67FDEB6C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5B15C729-37D4-496C-B1C8-3AA67FDEB6C4} = {DE28A7DA-F5B6-4A53-BAF4-AEE43DA2C95D}
+		{DE28A7DA-F5B6-4A53-BAF4-AEE43DA2C95D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5079C3B4-851A-48AA-B41B-314B8798522F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{29AA8142-7CF4-4A8B-A2A7-81491EC227EE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC4C5964-8EF1-4195-B792-3AAE8A6DAE67}
+	EndGlobalSection
+EndGlobal
