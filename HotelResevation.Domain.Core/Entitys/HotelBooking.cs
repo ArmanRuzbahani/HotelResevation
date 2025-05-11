@@ -12,9 +12,10 @@ namespace HotelResevation.Domain.Core
 		public int Id { get; set; }
 		public Room Room { get; set; }
 		public int RoomId { get; set; }
-		public DateTime DatetimeBooked { get; set; } = DateTime.Now;
-		public string Phonenumber { get; set; }
+		public DateTime DateTimeBooked { get; set; } = DateTime.Now;
+		public string PhoneNumber { get; set; }
 		public string IdCard { get; set; }
+		public string UserFullName { get; set; }
 
 	}
 }

@@ -11,11 +11,11 @@ namespace HotelResevation.Domain.Core.Entitys
 		public int Id { get; set; }
 		public string RoomName { get; set; }
 		public string Photos { get; set; }
-		public Hotel Hotel { get; set; }
 		public int HotelId { get; set; }
-		public string pricepernight { get; set; }
-		public bool IsEmptyOrNot { get; set; }
-		public List<HotelBooking> Bookings { get; set; }
+		public Hotel Hotel { get; set; }
+		public int PricePerNight { get; set; }
+		public bool IsEmpty { get; set; }
+		public List<HotelBooking> Bookings { get; set; } = new();
 	}
 }
 

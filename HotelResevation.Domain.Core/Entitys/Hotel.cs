@@ -12,14 +12,14 @@ namespace HotelResevation.Domain.Core.Entitys
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
-		public string Adress { get; set; }
+		public string Address { get; set; }
 		public string PhoneNumber { get; set; }
 		public string Email { get; set; }
 		public string Photos { get; set; }
-		public List<Room> Rooms { get; set; }
-		public List<Comment> Comments { get; set; }
-		public string description { get; set; }
-		public int Numbersofroom { get; set; }
+		public List<Room> Rooms { get; set; } = new();
+		public List<Comment> Comments { get; set; } = new();
+		public string Description { get; set; }
+		public int NumberOfRooms { get; set; }
 		public Citys Citys { get; set; }
 
 
