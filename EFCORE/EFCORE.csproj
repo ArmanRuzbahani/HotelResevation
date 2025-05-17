@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DTOs\DTOs.csproj" />
     <ProjectReference Include="..\HotelResevation.Domain.Core\HotelResevation.Domain.Core.csproj" />
   </ItemGroup>
 

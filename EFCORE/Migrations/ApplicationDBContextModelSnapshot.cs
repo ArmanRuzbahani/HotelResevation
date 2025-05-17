@@ -32,7 +32,8 @@ namespace EFCORE.Migrations
 
                     b.Property<string>("Content")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<DateTime>("DateTimeCreated")
                         .HasColumnType("datetime2");
@@ -58,7 +59,7 @@ namespace EFCORE.Migrations
 
                     b.HasIndex("HotelId");
 
-                    b.ToTable("comments");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("HotelResevation.Domain.Core.Entitys.Hotel", b =>
@@ -71,14 +72,16 @@ namespace EFCORE.Migrations
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("Citys")
+                    b.Property<int>("City")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -86,7 +89,8 @@ namespace EFCORE.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("NumberOfRooms")
                         .HasColumnType("int");
@@ -101,7 +105,7 @@ namespace EFCORE.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("hotels");
+                    b.ToTable("Hotels");
                 });
 
             modelBuilder.Entity("HotelResevation.Domain.Core.Entitys.Room", b =>
@@ -127,13 +131,14 @@ namespace EFCORE.Migrations
 
                     b.Property<string>("RoomName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("HotelId");
 
-                    b.ToTable("rooms");
+                    b.ToTable("Rooms");
                 });
 
             modelBuilder.Entity("HotelResevation.Domain.Core.HotelBooking", b =>
@@ -147,26 +152,41 @@ namespace EFCORE.Migrations
                     b.Property<DateTime>("DateTimeBooked")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("IdCard")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("UserFullName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("hotelBookings");
+                    b.ToTable("HotelBookings");
                 });
 
             modelBuilder.Entity("HotelResevation.Domain.Core.Entitys.Comment", b =>

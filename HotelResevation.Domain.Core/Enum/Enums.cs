@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelResevation.Domain.Core.Enum
 {
-	public enum Citys
+	public enum City
 	{
 		Tehran = 0,
 		Mashhad = 1,
